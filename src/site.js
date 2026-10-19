@@ -53,14 +53,7 @@ function showFormSuccess() {
   if (form) form.hidden = true
 }
 
-function setFormNextUrl() {
-  const next = document.querySelector('#contact-form input[name="_next"]')
-  if (!next) return
-  next.value = `${window.location.origin}/contact.html?sent=1`
-}
-
 initNav()
 initReveal()
 preselectService()
-setFormNextUrl()
 showFormSuccess()

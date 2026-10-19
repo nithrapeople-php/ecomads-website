@@ -19,6 +19,14 @@
     />
   </head>
   <body>
+    <!-- Netlify Forms: detected at deploy time -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <select name="service"></select>
+      <textarea name="message"></textarea>
+    </form>
+
     <div class="page">
       <header class="nav">
         <a class="nav-brand" href="/" aria-label="Ecomads home"><img class="logo-mark" src="/logo-mark.svg" alt="" width="32" height="32" /><span>ecomads</span></a>
@@ -62,14 +70,17 @@
               <form
                 id="contact-form"
                 class="contact-form reveal"
-                action="https://formsubmit.co/prem@ecomads.com"
+                name="contact"
                 method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                action="/contact.html?sent=1"
               >
-                <input type="hidden" name="_subject" value="New enquiry from ecomads.com" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="/contact.html?sent=1" />
-                <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="subject" value="New enquiry from ecomads.com" />
+                <p class="honeypot" aria-hidden="true">
+                  <label>Don’t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+                </p>
                 <label>
                   <span>Name</span>
                   <input type="text" name="name" required autocomplete="name" placeholder="Your name" />

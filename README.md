@@ -43,8 +43,16 @@ npm run build
 2. Netlify → **Import project** (settings in `netlify.toml`)
 3. Add domain `ecomads.com` and update DNS
 
-## Contact form
+## Contact form (Netlify Forms → prem@ecomads.com)
 
-The contact form emails **prem@ecomads.com** via [FormSubmit](https://formsubmit.co).
+After deploy, do this once in Netlify:
 
-On the **first** submission, FormSubmit sends a one-time activation email to `prem@ecomads.com` — open it and confirm. After that, every form message arrives in that inbox.
+1. **Site** → **Forms** → **Enable form detection** (if shown)
+2. Redeploy (this push triggers one) so Netlify registers the form
+3. **Forms** → **Submission notifications** → **Add notification**
+   - Type: **Email notification**
+   - Email to: **prem@ecomads.com**
+   - Form: **contact** (or all forms)
+4. Save, then test https://ecomads.com/contact.html
+
+Submissions also appear under **Forms** in the Netlify dashboard.
