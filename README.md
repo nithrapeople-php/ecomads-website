@@ -42,3 +42,9 @@ npm run build
 1. Push this repo to GitHub
 2. Netlify → **Import project** (settings in `netlify.toml`)
 3. Add domain `ecomads.com` and update DNS
+
+## Contact form
+
+The contact form emails **prem@ecomads.com** via [FormSubmit](https://formsubmit.co).
+
+On the **first** submission, FormSubmit sends a one-time activation email to `prem@ecomads.com` — open it and confirm. After that, every form message arrives in that inbox.

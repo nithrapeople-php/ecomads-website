@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188 40" fill="none" role="img" aria-label="Ecomads">
+  <rect width="40" height="40" rx="9" fill="#F4F7FB"/>
+  <rect x="8.5" y="22.5" width="5.5" height="9" rx="1.2" fill="#0A1628"/>
+  <rect x="16.75" y="16" width="5.5" height="15.5" rx="1.2" fill="#0A1628"/>
+  <rect x="25" y="10" width="5.5" height="21.5" rx="1.2" fill="#E85D04"/>
+  <path d="M27.75 6.5 L30.5 9.5 H25 L27.75 6.5Z" fill="#E85D04"/>
+  <text
+    x="52"
+    y="28"
+    fill="#F4F7FB"
+    font-family="Arial Black, Helvetica Neue, Arial, sans-serif"
+    font-size="24"
+    font-weight="800"
+    letter-spacing="-0.8"
+  >ecomads</text>
+</svg>

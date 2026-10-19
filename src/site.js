@@ -44,6 +44,23 @@ function preselectService() {
   }
 }
 
+function showFormSuccess() {
+  const params = new URLSearchParams(window.location.search)
+  if (params.get('sent') !== '1') return
+  const success = document.querySelector('#form-success')
+  const form = document.querySelector('#contact-form')
+  if (success) success.hidden = false
+  if (form) form.hidden = true
+}
+
+function setFormNextUrl() {
+  const next = document.querySelector('#contact-form input[name="_next"]')
+  if (!next) return
+  next.value = `${window.location.origin}/contact.html?sent=1`
+}
+
 initNav()
 initReveal()
 preselectService()
+setFormNextUrl()
+showFormSuccess()

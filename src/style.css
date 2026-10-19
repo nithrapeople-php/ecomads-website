@@ -66,11 +66,22 @@ img {
 }
 
 .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.35rem;
   letter-spacing: -0.03em;
   color: var(--ink);
+  line-height: 1;
+}
+
+.nav-brand .logo-mark {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 6px;
 }
 
 .nav-links {
@@ -625,7 +636,20 @@ img {
   position: absolute;
   left: -9999px;
   height: 0;
+  width: 0;
+  opacity: 0;
   overflow: hidden;
+  pointer-events: none;
+}
+
+.form-success {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.15rem;
+  background: color-mix(in srgb, var(--teal) 12%, #fff);
+  border: 1px solid color-mix(in srgb, var(--teal) 35%, transparent);
+  border-radius: 4px;
+  color: var(--ink-soft);
+  font-weight: 500;
 }
 
 /* ——— Reveal ——— */
@@ -976,6 +1000,12 @@ img {
 
 .footer .nav-brand {
   font-size: 1.1rem;
+}
+
+.footer .nav-brand .logo-mark {
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: 5px;
 }
 
 .footer-domain {
