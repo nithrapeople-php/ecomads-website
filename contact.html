@@ -77,8 +77,74 @@
                 </label>
                 <label>
                   <span>Email</span>
-                  <input type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                    autocomplete="email"
+                    inputmode="email"
+                    spellcheck="false"
+                    placeholder="you@company.com"
+                    pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+                    title="Enter a valid email like you@company.com"
+                  />
+                  <small class="field-hint" data-for="email" hidden></small>
                 </label>
+                <div class="phone-field">
+                  <span class="phone-label">Phone</span>
+                  <div class="phone-row">
+                    <label class="phone-code">
+                      <span class="visually-hidden">Country code</span>
+                      <select name="country_code" id="country_code" required autocomplete="tel-country-code">
+                        <option value="+91" selected>India +91</option>
+                        <option value="+1">US / Canada +1</option>
+                        <option value="+44">UK +44</option>
+                        <option value="+971">UAE +971</option>
+                        <option value="+65">Singapore +65</option>
+                        <option value="+61">Australia +61</option>
+                        <option value="+49">Germany +49</option>
+                        <option value="+33">France +33</option>
+                        <option value="+81">Japan +81</option>
+                        <option value="+86">China +86</option>
+                        <option value="+92">Pakistan +92</option>
+                        <option value="+880">Bangladesh +880</option>
+                        <option value="+94">Sri Lanka +94</option>
+                        <option value="+977">Nepal +977</option>
+                        <option value="other">Other…</option>
+                      </select>
+                    </label>
+                    <label class="phone-custom-code" id="custom-code-wrap" hidden>
+                      <span class="visually-hidden">Custom country code</span>
+                      <input
+                        type="text"
+                        name="custom_country_code"
+                        id="custom_country_code"
+                        inputmode="tel"
+                        placeholder="+___"
+                        autocomplete="tel-country-code"
+                        pattern="^\+[0-9]{1,4}$"
+                        title="Enter a dial code like +91"
+                      />
+                    </label>
+                    <label class="phone-number">
+                      <span class="visually-hidden">Phone number</span>
+                      <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        required
+                        autocomplete="tel-national"
+                        inputmode="tel"
+                        placeholder="98765 43210"
+                        pattern="^[0-9][0-9\s\-()]{6,18}$"
+                        title="Enter a valid phone number"
+                      />
+                    </label>
+                  </div>
+                  <small class="field-hint" data-for="phone" hidden></small>
+                  <input type="hidden" name="full_phone" id="full_phone" value="" />
+                </div>
                 <label>
                   <span>Service interest</span>
                   <select name="service" required>

@@ -627,9 +627,77 @@ img {
   border-color: var(--signal);
 }
 
+.contact-form input:invalid:not(:placeholder-shown):not(:focus),
+.contact-form select:invalid:not(:focus) {
+  border-color: #c2410c;
+}
+
 .contact-form .btn {
   align-self: flex-start;
   margin-top: 0.35rem;
+}
+
+.phone-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.phone-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.phone-row {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, 9rem) 1fr;
+  gap: 0.65rem;
+}
+
+.phone-row:has(#custom-code-wrap:not([hidden])) {
+  grid-template-columns: minmax(7.5rem, 9rem) 5.5rem 1fr;
+}
+
+.phone-code,
+.phone-custom-code,
+.phone-number {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+}
+
+.phone-code select,
+.phone-custom-code input,
+.phone-number input {
+  width: 100%;
+}
+
+.field-hint {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  color: #c2410c;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 560px) {
+  .phone-row,
+  .phone-row:has(#custom-code-wrap:not([hidden])) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .honeypot {
