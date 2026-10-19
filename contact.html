@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Ecomads — book a strategy call for SEO, GEO, paid ads, Google Business, or vibe coding."
+    />
+    <title>Contact — Ecomads</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <select name="service">
+        <option>SEO</option>
+        <option>GEO</option>
+        <option>Paid Ads</option>
+        <option>Google Business</option>
+        <option>Vibe Coding</option>
+        <option>Full growth package</option>
+      </select>
+      <textarea name="message"></textarea>
+    </form>
+
+    <div class="page">
+      <header class="nav">
+        <a class="nav-brand" href="/">ecomads</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/services.html">Services</a>
+          <a href="/approach.html">Approach</a>
+          <a href="/contact.html" class="nav-cta">Get started</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="page-hero-inner">
+            <p class="eyebrow">Contact</p>
+            <h1>Let’s grow your brand</h1>
+            <p class="lede">
+              Tell us where you are and where you want to go. We’ll reply with a practical next step — usually within one business day.
+            </p>
+          </div>
+        </section>
+
+        <section class="section contact">
+          <div class="contact-layout">
+            <div class="contact-copy reveal">
+              <h2>Start a conversation</h2>
+              <p>
+                Whether you need SEO, paid ads, local setup, or a fast project build — we’re ready to help.
+              </p>
+              <p class="contact-mail">
+                Or email <a href="mailto:hello@ecomads.com">hello@ecomads.com</a>
+              </p>
+            </div>
+            <form
+              class="contact-form reveal"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="honeypot" aria-hidden="true">
+                <label>Don’t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+              </p>
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" required autocomplete="name" placeholder="Your name" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
+              </label>
+              <label>
+                <span>Service interest</span>
+                <select name="service" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option>SEO</option>
+                  <option>GEO</option>
+                  <option>Paid Ads</option>
+                  <option>Google Business</option>
+                  <option>Vibe Coding</option>
+                  <option>Full growth package</option>
+                </select>
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="4" required placeholder="What are you trying to grow?"></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Send message</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-top">
+          <a class="nav-brand" href="/">ecomads</a>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="/">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/approach.html">Approach</a>
+            <a href="/contact.html">Contact</a>
+          </nav>
+        </div>
+        <nav class="footer-services" aria-label="Services">
+          <a href="/services/seo.html">SEO</a>
+          <a href="/services/geo.html">GEO</a>
+          <a href="/services/paid-ads.html">Paid Ads</a>
+          <a href="/services/google-business.html">Google Business</a>
+          <a href="/services/vibe-coding.html">Vibe Coding</a>
+        </nav>
+        <div class="footer-bottom">
+          <p>© 2026 Ecomads. Digital marketing for ecommerce.</p>
+          <p class="footer-domain">ecomads.com</p>
+        </div>
+      </footer>
+    </div>
+    <script type="module" src="/src/site.js"></script>
+  </body>
+</html>
