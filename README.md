@@ -45,14 +45,14 @@ npm run build
 
 ## Contact form (Netlify Forms → prem@ecomads.com)
 
-After deploy, do this once in Netlify:
+After this deploy finishes, do this once in Netlify:
 
-1. **Site** → **Forms** → **Enable form detection** (if shown)
-2. Redeploy (this push triggers one) so Netlify registers the form
-3. **Forms** → **Submission notifications** → **Add notification**
-   - Type: **Email notification**
+1. Open your site → **Forms**
+2. If you see **Enable form detection**, click it, then **Deploys → Trigger deploy → Deploy site**
+3. After that deploy, open **Forms** — you should see a form named **contact**
+4. **Forms → Submission notifications → Add notification**
    - Email to: **prem@ecomads.com**
-   - Form: **contact** (or all forms)
-4. Save, then test https://ecomads.com/contact.html
+   - Form: **contact**
+5. Test https://ecomads.com/contact.html — success goes to `/thanks.html`
 
-Submissions also appear under **Forms** in the Netlify dashboard.
+If submit shows **404**, the form is not registered yet — repeat steps 2–3.

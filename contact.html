@@ -19,14 +19,6 @@
     />
   </head>
   <body>
-    <!-- Netlify Forms: detected at deploy time -->
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <select name="service"></select>
-      <textarea name="message"></textarea>
-    </form>
-
     <div class="page">
       <header class="nav">
         <a class="nav-brand" href="/" aria-label="Ecomads home"><img class="logo-mark" src="/logo-mark.svg" alt="" width="32" height="32" /><span>ecomads</span></a>
@@ -64,9 +56,6 @@
               </p>
             </div>
             <div>
-              <p id="form-success" class="form-success" hidden>
-                Thanks — your message was sent. We’ll get back to you soon.
-              </p>
               <form
                 id="contact-form"
                 class="contact-form reveal"
@@ -74,7 +63,7 @@
                 method="POST"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
-                action="/contact.html?sent=1"
+                action="/thanks.html"
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <input type="hidden" name="subject" value="New enquiry from ecomads.com" />

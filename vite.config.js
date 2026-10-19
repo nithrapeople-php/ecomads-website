@@ -12,6 +12,7 @@ export default defineConfig({
         services: resolve(root, 'services.html'),
         approach: resolve(root, 'approach.html'),
         contact: resolve(root, 'contact.html'),
+        thanks: resolve(root, 'thanks.html'),
         seo: resolve(root, 'services/seo.html'),
         geo: resolve(root, 'services/geo.html'),
         paidAds: resolve(root, 'services/paid-ads.html'),
