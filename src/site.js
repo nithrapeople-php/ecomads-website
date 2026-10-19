@@ -81,26 +81,27 @@ function syncFullPhone() {
 
 function initPhoneCountry() {
   const codeSelect = document.querySelector('#country_code')
-  const wrap = document.querySelector('#custom-code-wrap')
   const custom = document.querySelector('#custom_country_code')
   const phone = document.querySelector('#phone')
-  if (!codeSelect || !wrap) return
+  if (!codeSelect || !custom) return
 
   const toggleCustom = () => {
     const isOther = codeSelect.value === 'other'
-    wrap.hidden = !isOther
-    if (custom) {
-      custom.required = isOther
-      if (!isOther) {
-        custom.value = ''
-        custom.setCustomValidity('')
-      }
+    codeSelect.classList.toggle('is-collapsed', isOther)
+    custom.classList.toggle('is-collapsed', !isOther)
+    custom.required = isOther
+    custom.tabIndex = isOther ? 0 : -1
+    if (!isOther) {
+      custom.value = ''
+      custom.setCustomValidity('')
+    } else {
+      custom.focus()
     }
     syncFullPhone()
   }
 
   codeSelect.addEventListener('change', toggleCustom)
-  custom?.addEventListener('input', syncFullPhone)
+  custom.addEventListener('input', syncFullPhone)
   phone?.addEventListener('input', syncFullPhone)
   toggleCustom()
 }

@@ -650,28 +650,31 @@ img {
 }
 
 .phone-row {
-  display: grid;
-  grid-template-columns: minmax(7.5rem, 9rem) 1fr;
-  gap: 0.65rem;
-}
-
-.phone-row:has(#custom-code-wrap:not([hidden])) {
-  grid-template-columns: minmax(7.5rem, 9rem) 5.5rem 1fr;
-}
-
-.phone-code,
-.phone-custom-code,
-.phone-number {
   display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin: 0;
+  gap: 0.65rem;
+  align-items: stretch;
 }
 
-.phone-code select,
-.phone-custom-code input,
-.phone-number input {
-  width: 100%;
+.phone-row select {
+  flex: 0 0 7.25rem;
+  width: 7.25rem;
+  min-width: 7.25rem;
+}
+
+.phone-row #custom_country_code {
+  flex: 0 0 5.25rem;
+  width: 5.25rem;
+  min-width: 5.25rem;
+}
+
+.phone-row #custom_country_code.is-collapsed,
+.phone-row select.is-collapsed {
+  display: none;
+}
+
+.phone-row #phone {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .field-hint {
@@ -681,22 +684,18 @@ img {
   color: #c2410c;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 @media (max-width: 560px) {
-  .phone-row,
-  .phone-row:has(#custom-code-wrap:not([hidden])) {
-    grid-template-columns: 1fr;
+  .phone-row {
+    flex-wrap: wrap;
+  }
+
+  .phone-row select,
+  .phone-row #custom_country_code {
+    flex: 0 0 auto;
+  }
+
+  .phone-row #phone {
+    flex: 1 1 100%;
   }
 }
 
